@@ -1,0 +1,15 @@
+.pedroantonioportfolioh1 {
+    color: blueviolet;
+    font-family: 'Didot', cursive;
+    font-size: 60px;
+}
+body {
+    display: flex;
+    flex-direction: column; /* Empilha os itens um embaixo do outro */
+    align-items: center;    /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente (opcional) */
+    min-height: 100vh;      /* Garante que o corpo ocupe a altura toda da tela */
+    margin: 0;              /* Remove espaços em branco nas bordas */
+    text-align: center;     /* Garante que os textos também fiquem centralizados */
+}
+
