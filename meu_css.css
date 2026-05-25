@@ -1,5 +1,5 @@
 .pedroantonioportfolioh1 {
-    color: blueviolet;
+    color: rgb(81, 9, 148);
     font-family: 'Didot', cursive;
     font-size: 60px;
 }
@@ -11,5 +11,21 @@ body {
     min-height: 100vh;      /* Garante que o corpo ocupe a altura toda da tela */
     margin: 0;              /* Remove espaços em branco nas bordas */
     text-align: center;     /* Garante que os textos também fiquem centralizados */
+    background-color: black;
 }
 
+:root {
+  --bg: #ffffff;
+  --texto: #111111;
+}
+
+body.escuro {
+  --bg: #111111;
+  --texto: #f0f0f0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
+}

@@ -7,9 +7,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="meu_css.css">
+  <button id="btn-tema" onclick="alternarTema()">🌙 Modo Escuro</button>
   <title>Pedro Antonio Beltrão Rihan</title>
 </head>
 <body>
+  <script>
+  function alternarTema() {
+    document.body.classList.toggle('escuro');
+    const btn = document.getElementById('btn-tema');
+    const escuro = document.body.classList.contains('escuro');
+    btn.textContent = escuro ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+    localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
+  }
+
+  if (localStorage.getItem('tema') === 'escuro') {
+    document.body.classList.add('escuro');
+    document.getElementById('btn-tema').textContent = '☀️ Modo Claro';
+  }
+</script>
   <img src="eu.jpeg"  width="300" alt="eu na torre eiffel" style="
     width: 200px; 
     height: 200px; 
