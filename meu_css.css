@@ -1,20 +1,8 @@
-.pedroantonioportfolioh1 {
-    color: rgb(81, 9, 148);
-    font-family: 'Didot', cursive;
-    font-size: 60px;
-}
-body {
-    display: flex;
-    flex-direction: column; /* Empilha os itens um embaixo do outro */
-    align-items: center;    /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente (opcional) */
-    min-height: 100vh;      /* Garante que o corpo ocupe a altura toda da tela */
-    margin: 0;              /* Remove espaços em branco nas bordas */
-    text-align: center;     /* Garante que os textos também fiquem centralizados */
-    background-color: black;
-}
+/* =====================
+   meu_css.css
+   ===================== */
 
-
+/* 1. Variáveis de tema */
 :root {
   --bg: #ffffff;
   --texto: #111111;
@@ -25,8 +13,97 @@ body.escuro {
   --texto: #f0f0f0;
 }
 
+/* 2. Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3. Body */
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
   background-color: var(--bg);
   color: var(--texto);
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* 4. Foto */
+#minha-foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(81, 9, 148);
+  display: block;
+  margin: 40px auto 20px;
+  transition: opacity 0.3s;
+}
+
+/* 5. Título principal */
+.pedroantonioportfolioh1 {
+  color: rgb(81, 9, 148);
+  font-family: 'Didot', cursive;
+  font-size: 60px;
+  border-bottom: 2px solid rgb(81, 9, 148);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* 6. Nav */
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* 7. Seções */
+section {
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 8. Botão de tema */
+#btn-tema {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  z-index: 999;
+}
+
+/* 9. Texto sobre mim */
+.aboutme {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  max-width: 600px;
+}
+
+@keyframes saltitar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.pedroantonioportfolioh1 span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.pedroantonioportfolioh1 span:hover {
+  transform: translateY(-15px);
 }

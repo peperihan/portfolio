@@ -1,57 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="meu_css.css">
-  <button id="btn-tema" onclick="alternarTema()">🥶 </button>
   <title>Pedro Antonio Beltrão Rihan</title>
+  <link rel="stylesheet" href="meu_css.css">
 </head>
 <body>
+
+  <button id="btn-tema" onclick="alternarTema()">🥵</button>
+
   <header>
+    <img
+      id="minha-foto"
+      src="eu_dedia.jpeg"
+      alt="Pedro Antonio"
+    >
+    <h1 class="pedroantonioportfolioh1">
+    <span>P</span><span>e</span><span>d</span><span>r</span><span>o</span>
+    <span> </span>
+    <span>A</span><span>n</span><span>t</span><span>o</span><span>n</span><span>i</span><span>o</span>
+    <span>'</span><span>s</span>
+    <span> </span>
+    <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
+    </h1>
 
+    <nav>
+      <a href="#sobre">sobre mim</a>
+      <a href="#interesses">interesses</a>
+      <a href="#curiosidades">curiosidades</a>
+      <a href="#contato">contato</a>
+    </nav>
   </header>
+
+  <section id="sobre">
+    <h2>About me:</h2>
+    <p class="aboutme">
+      Howdy there, partner! I'm Pedro Antonio Beltrão Rihan,
+      a Computer Science Student from CESAR School.
+    </p>
+  </section>
+
+  <section id="interesses">
+    <h2>Interesses</h2>
+    <p>...</p>
+    <img id="foto-tung" src="" alt="Tung Tung Sahur" style="display:none; width:200px; border-radius: 12px; margin-top: 20px;">
+  </section>
+
+  <section id="projetos">
+    <h2>Projects</h2>
+    <p>...</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contacts</h2>
+    
+    <p>Send me a message, or something else 🤙 <br>
+      <a href="https://github.com/peperihan" class="github">github</a> <br>
+      <a href="https://www.linkedin.com/in/pedro-antonio-beltrão-rihan-b033553b7/" class="linkedin">linkedin</a> 
+      <p>tonyrihan25@gmail.com</p>
+    </p>
+  </section>
+
   <script>
-  function alternarTema() {
-    document.body.classList.toggle('escuro');
-    const btn = document.getElementById('btn-tema');
-    const escuro = document.body.classList.contains('escuro');
-    btn.textContent = escuro ? '🥵' : '🥶';
-    localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
+   function alternarTema() {
+  document.body.classList.toggle('escuro');
+  const btn = document.getElementById('btn-tema');
+  const foto = document.getElementById('minha-foto');
+  const tung = document.getElementById('foto-tung');
+  const escuro = document.body.classList.contains('escuro');
+
+  btn.textContent = escuro ? '🥶' : '🥵';
+  foto.src = escuro ? 'eu.jpeg' : 'eu_dedia.jpeg';
+  tung.style.display = escuro ? 'block' : 'none';
+  tung.src = escuro ? 'tung.webp' : '';
+  localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
   }
 
-  if (localStorage.getItem('tema') === 'escuro') {
-    document.body.classList.add('escuro');
-    document.getElementById('btn-tema').textContent = '🥵';
-  }
-
-</script>
-  <img src="eu.jpeg"  width="300" alt="eu na torre eiffel" style="
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 5px solid rgba(81, 9, 148);
-    ">
-  <h1 class="pedroantonioportfolioh1">Pedro Antonio's Portfolio</h1>
-  <nav>
-    <a href="#sobre"href="#interesses">sobre mim </a>
-    <a href="#interesses">interesses</a>
-    <a href="#curiosidades">curiosidades</a>
-    <a href="#contato">contato</a>
-  </nav>
-  <section id="sobre"><h1>
-    Sobre mim:
-  </h1>
-    <p>Howdy there, partner! I'm Pedro Antonio Beltrão Rihan a Computer Science 
-    Student from CESAR School
-  </p></section>
-  <section id="interesses">...</section>
-  <section id="curiosidades">...</section>
-  <section id="contato">...</section>
+    if (localStorage.getItem('tema') === 'escuro') {
+      document.body.classList.add('escuro');
+      document.getElementById('btn-tema').textContent = '🥶';
+      document.getElementById('minha-foto').src = 'eu.jpeg';
+    }
+  </script>
 
 </body>
 </html>
