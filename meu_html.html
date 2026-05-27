@@ -16,13 +16,13 @@
     document.body.classList.toggle('escuro');
     const btn = document.getElementById('btn-tema');
     const escuro = document.body.classList.contains('escuro');
-    btn.textContent = escuro ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+    btn.textContent = escuro ? '☀️' : '🌙';
     localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
   }
 
   if (localStorage.getItem('tema') === 'escuro') {
     document.body.classList.add('escuro');
-    document.getElementById('btn-tema').textContent = '☀️ Modo Claro';
+    document.getElementById('btn-tema').textContent = '☀️';
   }
 </script>
   <img src="eu.jpeg"  width="300" alt="eu na torre eiffel" style="
