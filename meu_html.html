@@ -7,41 +7,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="meu_css.css">
-  <button id="btn-tema" onclick="alternarTema()">🌙 Modo Escuro</button>
+  <button id="btn-tema" onclick="alternarTema()">🥶 </button>
   <title>Pedro Antonio Beltrão Rihan</title>
 </head>
 <body>
+  <header>
+
+  </header>
   <script>
   function alternarTema() {
     document.body.classList.toggle('escuro');
     const btn = document.getElementById('btn-tema');
     const escuro = document.body.classList.contains('escuro');
-    btn.textContent = escuro ? '☀️' : '🌙';
+    btn.textContent = escuro ? '🥵' : '🥶';
     localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
   }
 
   if (localStorage.getItem('tema') === 'escuro') {
     document.body.classList.add('escuro');
-    document.getElementById('btn-tema').textContent = '☀️';
+    document.getElementById('btn-tema').textContent = '🥵';
   }
+
 </script>
   <img src="eu.jpeg"  width="300" alt="eu na torre eiffel" style="
     width: 200px; 
     height: 200px; 
     border-radius: 50%; 
     object-fit: cover; 
+    border: 5px solid rgba(81, 9, 148);
     ">
-  <h1 class="pedroantonioportfolioh1">Pedro Antonio Portfolio's</h1>
-
-  <a href="#sobre">sobre mim</a>
-  <a href="#interesses">interesses</a>
-  <a href="#curiosidades">curiosidades</a>
-  <a href="#contato">contato</a>
-
-  <section id="sobre"><h1>Sobre mim:</h1><p>Howdy there, partner! I'm Pedro Antonio Beltrão Rihan a Computer Science 
-    Student from CESAR School</p>
-
-  </section>
+  <h1 class="pedroantonioportfolioh1">Pedro Antonio's Portfolio</h1>
+  <nav>
+    <a href="#sobre"href="#interesses">sobre mim </a>
+    <a href="#interesses">interesses</a>
+    <a href="#curiosidades">curiosidades</a>
+    <a href="#contato">contato</a>
+  </nav>
+  <section id="sobre"><h1>
+    Sobre mim:
+  </h1>
+    <p>Howdy there, partner! I'm Pedro Antonio Beltrão Rihan a Computer Science 
+    Student from CESAR School
+  </p></section>
   <section id="interesses">...</section>
   <section id="curiosidades">...</section>
   <section id="contato">...</section>
