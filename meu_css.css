@@ -1,7 +1,3 @@
-/* =====================
-   meu_css.css
-   ===================== */
-
 /* 1. Variáveis de tema */
 :root {
   --bg: #ffffff;
@@ -31,6 +27,11 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  letter-spacing: 1px;
+}
 /* 4. Foto */
 #minha-foto {
   width: 200px;
@@ -40,7 +41,13 @@ body {
   border: 5px solid rgba(81, 9, 148);
   display: block;
   margin: 40px auto 20px;
-  transition: opacity 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#minha-foto:hover {
+  transform: scale(1.1);
+  animation: girar-borda 1.5s linear infinite;
+  box-shadow: 0 0 20px 6px rgba(81, 9, 148, 0.8);
 }
 
 /* 5. Título principal */
@@ -86,24 +93,137 @@ section {
   background: transparent;
   z-index: 999;
 }
+.status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: rgb(81, 9, 148);
+  background-color: rgba(81, 9, 148, 0.08);
+  border: 1px solid rgba(81, 9, 148, 0.3);
+  border-radius: 20px;
+  padding: 8px 18px;
+  display: inline-block;
+  margin-top: 24px;
+}
 
+.skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  background-color: transparent;
+  color: rgb(81, 9, 148);
+  border: 1px solid rgba(81, 9, 148, 0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.skill-tag:hover {
+  background-color: rgb(81, 9, 148);
+  color: #fff;
+}
+.tituloaboutme {
+  font-family: 'Playfair Display', serif;
+}
 /* 9. Texto sobre mim */
-.aboutme {
+.fraseaboutme {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   max-width: 600px;
 }
 
+/* texto da parte de projetos */
+.fraseinterests{ 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  max-width: 600px;
+}
+/* parte de fazer as letras pularem*/ 
 @keyframes saltitar {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
+/* faz parte da bora girar */
+@keyframes girar-borda {
+  0%   { border-color: rgba(81, 9, 148, 1); box-shadow: 0 0 20px 6px rgba(81, 9, 148, 0.8); }
+  25%  { border-color: rgba(140, 50, 255, 1); box-shadow: 0 0 25px 8px rgba(140, 50, 255, 0.9); }
+  50%  { border-color: rgba(200, 100, 255, 1); box-shadow: 0 0 30px 10px rgba(200, 100, 255, 1); }
+  75%  { border-color: rgba(140, 50, 255, 1); box-shadow: 0 0 25px 8px rgba(140, 50, 255, 0.9); }
+  100% { border-color: rgba(81, 9, 148, 1); box-shadow: 0 0 20px 6px rgba(81, 9, 148, 0.8); }
+}
 
+/* parte do movimento legalzinho */
 .pedroantonioportfolioh1 span {
   display: inline-block;
   transition: transform 0.2s ease;
+  
 }
-
+/* movimentacao so quando passar o cursor do mouse por cima */
 .pedroantonioportfolioh1 span:hover {
   transform: translateY(-15px);
+}
+
+/* parte de cima que linka com o texto de baixo*/
+#projects{
+  text-decoration: none;
+}
+.email {
+  text-decoration: none;
+  color: var(--texto);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px;
+  transition: color 0.2s ease;
+}
+
+.email:hover { color: #EA4335; }
+
+.email i { font-size: 24px; }
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: rgb(81, 9, 148);
+  transition: color 0.2s ease;
+}
+.github, .linkedin {
+  text-decoration: none;
+  color: var(--texto);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px;
+  transition: color 0.2s ease;
+}
+
+.github:hover { color: rgb(81, 9, 148); }
+.linkedin:hover { color: #0077B5; }
+
+.github i, .linkedin i {
+  font-size: 24px;
+}
+.contatos{
+  font-style: italic;
+}
+.frasecontatos{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  max-width: 600px;
 }
