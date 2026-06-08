@@ -4,6 +4,31 @@
   --texto: #111111;
 }
 
+body.escuro .pedroantonioportfolioh1 {
+  color: rgb(160, 90, 255);
+  border-bottom-color: rgb(160, 90, 255);
+}
+
+body.escuro #minha-foto {
+  border-color: rgb(160, 90, 255);
+}
+
+body.escuro .status {
+  color: rgb(160, 90, 255);
+  background-color: rgba(160, 90, 255, 0.1);
+  border-color: rgba(160, 90, 255, 0.4);
+}
+
+body.escuro .skill-tag {
+  color: rgb(160, 90, 255);
+  border-color: rgba(160, 90, 255, 0.4);
+}
+
+body.escuro .skill-tag:hover {
+  background-color: rgb(160, 90, 255);
+  color: #111;
+}
+
 body.escuro {
   --bg: #111111;
   --texto: #f0f0f0;
@@ -13,7 +38,21 @@ body.escuro {
 html {
   scroll-behavior: smooth;
 }
+body.escuro .status {
+  color: rgb(180, 120, 255);
+  background-color: rgba(180, 120, 255, 0.1);
+  border-color: rgba(180, 120, 255, 0.4);
+}
 
+body.escuro .skill-tag {
+  color: rgb(180, 120, 255);
+  border-color: rgba(180, 120, 255, 0.4);
+}
+
+body.escuro .skill-tag:hover {
+  background-color: rgb(180, 120, 255);
+  color: #111;
+}
 /* 3. Body */
 body {
   display: flex;

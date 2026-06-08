@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <button id="btn-tema" onclick="alternarTema()">🥵</button>
+  <button id="btn-tema" onclick="alternarTema()">🔆</button>
 
   <header>
     <img
@@ -83,7 +83,7 @@
   const tung = document.getElementById('foto-tung');
   const escuro = document.body.classList.contains('escuro');
 
-  btn.textContent = escuro ? '🥶' : '🥵';
+  btn.textContent = escuro ? '🌛' : '🔆';
   foto.src = escuro ? 'eu.jpeg' : 'eu_dedia.jpeg';
   tung.style.display = escuro ? 'block' : 'none';
   tung.src = escuro ? 'tung.webp' : '';
@@ -92,7 +92,7 @@
 
     if (localStorage.getItem('tema') === 'escuro') {
       document.body.classList.add('escuro');
-      document.getElementById('btn-tema').textContent = '🥶';
+      document.getElementById('btn-tema').textContent = '🌛';
       document.getElementById('minha-foto').src = 'eu.jpeg';
     }
   </script>
