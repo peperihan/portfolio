@@ -1,69 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedro Antonio Beltrão Rihan</title>
-  <link rel="stylesheet" href="meu_css.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Antonio Beltrão Rihan</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <button id="btn-tema" onclick="alternarTema()">🔆</button>
-
-  <header>
-    <img
-      id="minha-foto"
-      src="eu_dedia.jpeg"
-      alt="Pedro Antonio"
-    >
-    <h1 class="pedroantonioportfolioh1">
+<button id="btn-tema" onclick="alternarTema()">🔆</button>
+<header>
+  <img id="minha-foto" src="eu_dedia.jpeg" alt="Pedro Antonio">
+  <h1 class="pedroantonioportfolioh1">
     <span>P</span><span>e</span><span>d</span><span>r</span><span>o</span>
     <span> </span>
     <span>A</span><span>n</span><span>t</span><span>o</span><span>n</span><span>i</span><span>o</span><span>'</span><span>s</span>
     <span> </span>
     <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
-    </h1>
+  </h1>
+  <nav>
+    <a href="#sobre">about me</a>
+    <a href="#interesses">interests</a>
+    <a href="#projects">projects</a>
+    <a href="#contato">contacts</a>
+  </nav>
+</header>
 
-    <nav>
-      <a href="#sobre">about me</a>
-      <a href="#interesses">interests</a>
-      <a href="#projects">projects</a>
-      <a href="#contato">contacts</a>
-    </nav>
-  </header>
+<section id="sobre">
+  <h2 class="tituloaboutme">About me:</h2>
+  <p class="fraseaboutme">Howdy there, partner! 👋</p>
+  <p class="status">⚡ Currently: 1st semester @ CESAR School</p>
+  <div class="skills">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">HTML</span>
+    <span class="skill-tag">CSS</span>
+    <span class="skill-tag">JavaScript</span>
+  </div>
+</section>
 
-  <section id="sobre">
-    <h2 class="tituloaboutme">About me:</h2>
-    <p class="fraseaboutme">
-      Howdy there, partner! 👋
-    </p>
-    <p class="status">⚡ Currently: 1st semester @ CESAR School</p>
-    <div class="skills">
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">HTML</span>
-      <span class="skill-tag">CSS</span>
-      <span class="skill-tag">JavaScript</span>
-    </div>
-  </section>
+<section id="interesses">
+  <h2>Interests</h2>
+  <p class="fraseinterests">I'm genuinely fascinated by how computers think — or at least,
+    how we trick them into thinking. From low-level logic gates to high-level algorithms,
+    there's something oddly satisfying about breaking a complex problem into tiny, solvable pieces.</p>
+  <img id="foto-tung" src="" alt="Tung Tung Sahur" style="display:none; width:200px; border-radius: 12px; margin-top: 20px;">
+</section>
 
-  <section id="interesses">
-    <h2>Interests</h2>
-    <p class="fraseinterests">I'm genuinely fascinated by how computers think — or at least,
-       how we trick them into thinking. From low-level logic gates to high-level algorithms, 
-       there's something oddly satisfying about breaking a complex problem into tiny, solvable pieces.</p>
-    <img id="foto-tung" src="" alt="Tung Tung Sahur" style="display:none; width:200px; border-radius: 12px; margin-top: 20px;">
-  </section>
+<section id="projects">
+  <h2>My Projects</h2>
+  <p>...</p>
+</section>
 
-  <section id="projects">
-    <h2>My Projects</h2>
-    <p>...</p>
-  </section>
-
- <section id="contato">
+<section id="contato">
   <h2 class="contatos">Contacts</h2>
-    <p class="frasecontatos">Send me a message, or something else 🤙</p>
+  <p class="frasecontatos">Send me a message, or something else 🤙</p>
   <a href="https://github.com/peperihan" class="github">
     <i class="fa-brands fa-github"></i> github
   </a>
@@ -75,27 +66,6 @@
   </a>
 </section>
 
-  <script>
-   function alternarTema() {
-  document.body.classList.toggle('escuro');
-  const btn = document.getElementById('btn-tema');
-  const foto = document.getElementById('minha-foto');
-  const tung = document.getElementById('foto-tung');
-  const escuro = document.body.classList.contains('escuro');
-
-  btn.textContent = escuro ? '🌛' : '🔆';
-  foto.src = escuro ? 'eu.jpeg' : 'eu_dedia.jpeg';
-  tung.style.display = escuro ? 'block' : 'none';
-  tung.src = escuro ? 'tung.webp' : '';
-  localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
-  }
-
-    if (localStorage.getItem('tema') === 'escuro') {
-      document.body.classList.add('escuro');
-      document.getElementById('btn-tema').textContent = '🌛';
-      document.getElementById('minha-foto').src = 'eu.jpeg';
-    }
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
