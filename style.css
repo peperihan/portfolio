@@ -14,31 +14,6 @@ body.escuro #minha-foto {
 }
 
 body.escuro .status {
-  color: rgb(160, 90, 255);
-  background-color: rgba(160, 90, 255, 0.1);
-  border-color: rgba(160, 90, 255, 0.4);
-}
-
-body.escuro .skill-tag {
-  color: rgb(160, 90, 255);
-  border-color: rgba(160, 90, 255, 0.4);
-}
-
-body.escuro .skill-tag:hover {
-  background-color: rgb(160, 90, 255);
-  color: #111;
-}
-
-body.escuro {
-  --bg: #111111;
-  --texto: #f0f0f0;
-}
-
-/* 2. Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-body.escuro .status {
   color: rgb(180, 120, 255);
   background-color: rgba(180, 120, 255, 0.1);
   border-color: rgba(180, 120, 255, 0.4);
@@ -53,6 +28,23 @@ body.escuro .skill-tag:hover {
   background-color: rgb(180, 120, 255);
   color: #111;
 }
+
+body.escuro {
+  --bg: #111111;
+  --texto: #f0f0f0;
+}
+
+body.escuro::before {
+  background-image: radial-gradient(rgba(130, 50, 220, 0.25) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 1;
+}
+
+/* 2. Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
 /* 3. Body */
 body {
   display: flex;
@@ -66,11 +58,25 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.035;
+  background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+}
+
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 42px;
   letter-spacing: 1px;
 }
+
 /* 4. Foto */
 #minha-foto {
   width: 200px;
@@ -92,7 +98,7 @@ h2 {
 /* 5. Título principal */
 .pedroantonioportfolioh1 {
   color: rgb(81, 9, 148);
-  font-family: 'Didot', cursive;
+  font-family: 'Didot', serif;
   font-size: 60px;
   border-bottom: 2px solid rgb(81, 9, 148);
   padding-bottom: 10px;
@@ -109,7 +115,6 @@ nav {
 
 /* 7. Seções */
 section {
-  min-height: 100vh;
   padding: 60px 40px;
   display: flex;
   flex-direction: column;
@@ -132,6 +137,7 @@ section {
   background: transparent;
   z-index: 999;
 }
+
 .status {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
@@ -167,28 +173,65 @@ section {
   background-color: rgb(81, 9, 148);
   color: #fff;
 }
+
+/* 9. Títulos das seções */
 .tituloaboutme {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
 }
-/* 9. Texto sobre mim */
+
+.projects {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#projects {
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.contatos {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* 10. Textos descritivos */
 .fraseaboutme {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   max-width: 600px;
 }
 
-/* texto da parte de projetos */
-.fraseinterests{ 
+.fraseinterests {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   max-width: 600px;
 }
-/* parte de fazer as letras pularem*/ 
+
+.fraseprojects {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  max-width: 600px;
+}
+
+.frasecontatos {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  max-width: 600px;
+}
+
+/* 11. Imagem certificado */
+.imagem-certificado {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* 12. Animações */
 @keyframes saltitar {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
 }
-/* faz parte da bora girar */
+
 @keyframes girar-borda {
   0%   { border-color: rgba(81, 9, 148, 1); box-shadow: 0 0 20px 6px rgba(81, 9, 148, 0.8); }
   25%  { border-color: rgba(140, 50, 255, 1); box-shadow: 0 0 25px 8px rgba(140, 50, 255, 0.9); }
@@ -197,21 +240,17 @@ section {
   100% { border-color: rgba(81, 9, 148, 1); box-shadow: 0 0 20px 6px rgba(81, 9, 148, 0.8); }
 }
 
-/* parte do movimento legalzinho */
+/* 13. Movimento das letras do título */
 .pedroantonioportfolioh1 span {
   display: inline-block;
   transition: transform 0.2s ease;
-  
 }
-/* movimentacao so quando passar o cursor do mouse por cima */
+
 .pedroantonioportfolioh1 span:hover {
   transform: translateY(-15px);
 }
 
-/* parte de cima que linka com o texto de baixo*/
-#projects{
-  text-decoration: none;
-}
+/* 14. Links de contato */
 .email {
   text-decoration: none;
   color: var(--texto);
@@ -227,6 +266,7 @@ section {
 .email:hover { color: #EA4335; }
 
 .email i { font-size: 24px; }
+
 nav a {
   text-decoration: none;
   color: var(--texto);
@@ -238,8 +278,8 @@ nav a {
 
 nav a:hover {
   color: rgb(81, 9, 148);
-  transition: color 0.2s ease;
 }
+
 .github, .linkedin {
   text-decoration: none;
   color: var(--texto);
@@ -257,12 +297,4 @@ nav a:hover {
 
 .github i, .linkedin i {
   font-size: 24px;
-}
-.contatos{
-  font-style: italic;
-}
-.frasecontatos{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  max-width: 600px;
 }
