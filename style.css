@@ -176,20 +176,20 @@ section {
 
 /* 9. Títulos das seções */
 .tituloaboutme {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Syne', serif;
 }
 
 .projects {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Syne', serif;
 }
 
 #projects {
   text-decoration: none;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Syne', serif;
 }
 
 .contatos {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Syne', serif;
 }
 
 /* 10. Textos descritivos */
@@ -297,4 +297,12 @@ nav a:hover {
 
 .github i, .linkedin i {
   font-size: 24px;
+}
+/* 15. Grid de certificados */
+.certificados-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 16px;
 }

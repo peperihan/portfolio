@@ -1,80 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedro Antonio Beltrão Rihan</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedro Antonio Beltrão Rihan</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button id="btn-tema" onclick="alternarTema()">🔆</button>
+<button id="btn-tema" onclick="alternarTema()">🔆</button>
+<header>
+<img id="minha-foto" src="eu_dedia.jpeg" alt="Pedro Antonio">
+<h1 class="pedroantonioportfolioh1">
+<span>P</span><span>e</span><span>d</span><span>r</span><span>o</span>
+<span> </span>
+<span>A</span><span>n</span><span>t</span><span>o</span><span>n</span><span>i</span><span>o</span><span>'</span><span>s</span>
+<span> </span>
+<span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
+</h1>
 
-  <header>
-    <img id="minha-foto" src="eu_dedia.jpeg" alt="Pedro Antonio">
-    <h1 class="pedroantonioportfolioh1">
-      <span>P</span><span>e</span><span>d</span><span>r</span><span>o</span>
-      <span> </span>
-      <span>A</span><span>n</span><span>t</span><span>o</span><span>n</span><span>i</span><span>o</span><span>'</span><span>s</span>
-      <span> </span>
-      <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
-    </h1>
-    <nav>
-      <a href="#sobre">about me</a>
-      <a href="#interesses">interests</a>
-      <a href="#projects">projects</a>
-      <a href="#contato">contacts</a>
-    </nav>
-  </header>
+<nav>
+<a href="#sobre">about me</a>
+<a href="#interesses">interests</a>
+<a href="#projects">projects</a>
+<a href="#contato">contacts</a>
+</nav>
+</header>
+<section id="sobre">
+<h2 class="tituloaboutme">About me:</h2>
+<p class="fraseaboutme">Howdy there, partner! 👋</p>
+<p class="status">⚡ Currently: 1st semester @ CESAR School</p>
+<div class="skills">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">HTML</span>
+<span class="skill-tag">CSS</span>
+<span class="skill-tag">JavaScript</span>
+<span class="skill-tag">Arduino</span>
+<span class="skill-tag">Git</span>
+<span class="skill-tag">Github</span>
+</div>
+<img src="luffy.gif" alt="Luffy" style="width: 200px; margin-top: 32px; border-radius: 12px;">
+</section>
 
-  <section id="sobre">
-    <h2 class="tituloaboutme">About me:</h2>
-    <p class="fraseaboutme">Howdy there, partner! 👋</p>
-    <p class="status">⚡ Currently: 1st semester @ CESAR School</p>
-    <div class="skills">
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">HTML</span>
-      <span class="skill-tag">CSS</span>
-      <span class="skill-tag">JavaScript</span>
-      <span class="skill-tag">Arduino</span>
-      <span class="skill-tag">Git</span>
-      <span class="skill-tag">Github</span>
-    </div>
-    <img src="seu-gif.gif" alt="gif" style="width: 200px; margin-top: 32px; border-radius: 12px;">
-  </section>
-
-  <section id="interesses">
-    <h2>Interests</h2>
-    <p class="fraseinterests">I'm genuinely fascinated by how computers think — or at least,
+<section id="interesses">
+<h2>Interests</h2>
+<p class="fraseinterests">I'm genuinely fascinated by how computers think — or at least,
       how we trick them into thinking. From low-level logic gates to high-level algorithms,
       there's something oddly satisfying about breaking a complex problem into tiny, solvable pieces.</p>
-  </section>
+</section>
 
-  <section id="projects">
-    <h2>projects</h2>
-    <p class="fraseprojects">Some of my individual/group projects <br>
-      <img class="imagem-certificado" src="certificadojavascript.png" alt="certificado de java script">
-      
-    </p>
-  </section>
+<section id="projects">
+<h2>certifications</h2>
+<p class="fraseprojects">Some of my certificates</p>
+<div class="certificados-grid">
+  <img class="imagem-certificado" src="certificadojavascript.png" alt="Certificado JavaScript">
+  <img class="imagem-certificado" src="cursoorango.png" alt="Certificado Orange">
+  <img class="imagem-certificado" src="cursopython.png" alt="Certificado Python">
+</div>
+</section>
 
-  <section id="contato">
-    <h2 class="contatos">Contacts</h2>
-    <p class="frasecontatos">Send me a message, or something else 🤙</p>
-    <div class="contatos-links">
-      <a href="https://github.com/peperihan" class="github">
-        <i class="fa-brands fa-github"></i> github
-      </a>
-      <a href="https://www.linkedin.com/in/pedro-antonio-beltrão-rihan-b033553b7/" class="linkedin">
-        <i class="fa-brands fa-linkedin"></i> linkedin
-      </a>
-      <a href="mailto:tonyrihan25@gmail.com" class="email">
-        <i class="fa-solid fa-envelope"></i> tonyrihan25@gmail.com
-      </a>
-    </div>
-  </section>
+<section id="contato">
+<h2 class="contatos">Contacts</h2>
+<p class="frasecontatos">Send me a message, or something else 🤙</p>
+<div class="contatos-links">
+<a href="https://github.com/peperihan" class="github">
+<i class="fa-brands fa-github"></i> github
+</a>
 
-  <script src="script.js"></script>
+<a href="https://www.linkedin.com/in/pedro-antonio-beltrão-rihan-b033553b7/" class="linkedin">
+<i class="fa-brands fa-linkedin"></i> linkedin
+</a>
+
+<a href="mailto:tonyrihan25@gmail.com" class="email">
+<i class="fa-solid fa-envelope"></i> tonyrihan25@gmail.com
+</a>
+</div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
